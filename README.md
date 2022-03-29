@@ -12,7 +12,7 @@ In this documentation we explained how to use Huawei-Applovin mediation.
 
 |   | Banner Ad | Interstitial Ad | Rewarded Ad | Native Ad | MREC |
 | --- | --- | --- | --- | --- | --- |
-| Native (Java/Kotlin) | ❌ | ✅ | ✅ | ✅ |  ✅ |
+| Native (Java/Kotlin) | ✅ | ✅ | ✅ | ✅ |  ✅ |
 
 
 # How to start?
@@ -30,9 +30,10 @@ In this documentation we explained how to use Huawei-Applovin mediation.
 5. Enter  "**HuaweiMediationAdapter**" for iOS Adapter Class Name
 6. Go to "**Ad Units**" tab, and create a new ad unit or modify the existing one.
 7. On "**Default Waterfall**" section below the "**Custom Networks & Deals**" enable the Huawei network.
-8. Enter the Huawei Ad unit ID  for Placement ID and Enter CPM price for the waterfall.
+8. Enter the Huawei Ad unit ID  for Placement ID and Enter CPM price for the waterfall. 
+   <br>
 
-   **Note:** Enter Huawei 300x250 Banner slot ID for Applovin MREC ad type. <br>
+
    **Note:** This [link](https://dash.applovin.com/documentation/mediation/android/mediation-setup/custom-sdk) also can be useful.
 
 
@@ -116,7 +117,11 @@ To allow HTTP and HTTPS network requests on devices with targetSdkVersion 28 or 
 
 # Version Change History
 
-## 13.4.49.301.1
+## 13.4.49.301.3
+
+Banner Ad type fixed. 
+
+## 13.4.49.301.2
 
 Banner and MREC adapter classes are added. 
 
@@ -156,5 +161,36 @@ To use _Native_ ads in Native android apps, please check the Applovin-MAX SDK. C
 
 ### **MREC Ads**
 
-To use _MREC_ ads in Native android apps, please check the Applovin-MAX SDK. Click [here](https://dash.applovin.com/documentation/mediation/android/getting-started/mrecs) to get more information about  Applovin-MAX SDKs MREC Ad development.
+To use _MREC_ ads in Native android apps, please check the Applovin-MAX SDK. Click [here](https://dash.applovin.com/documentation/mediation/android/getting-started/mrecs) to get more information about  Applovin-MAX SDKs MREC Ad development. <br>
 
+   **Note:** Enter Huawei 300x250 Banner slot ID for Applovin MREC ad type.
+ 
+ <br />
+ 
+ # Screenshots
+ <table>
+<tr>
+<td>
+<img src="https://user-images.githubusercontent.com/53767481/160608807-0b0d19a8-02fa-4a45-9325-44d7f2996556.jpg" width="200">
+
+Banner Ad
+</td>
+ <td>
+<img src="https://user-images.githubusercontent.com/53767481/160609711-a9a4841d-1737-4ecd-a66b-68f78f990ae6.jpg" width="200">
+
+Interstitial Ad
+</td>
+
+<td>
+<img src="https://user-images.githubusercontent.com/53767481/160609047-1b05a4de-2f6e-4246-8339-50d1b887f186.jpg" width="200">
+
+Rewarded Ad
+</td>
+<td>
+<img src="https://user-images.githubusercontent.com/53767481/160609060-b67f5223-352e-4b29-bb48-a8c42b89403f.jpg" width="200">
+
+Native Ad
+</td>
+</tr>
+</tr>
+</table>
