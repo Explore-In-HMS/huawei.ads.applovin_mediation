@@ -1,8 +1,8 @@
  <h1 align="center">Huawei-Applovin Mediation Github Documentation</h3>
 
-![Latest Version](https://img.shields.io/badge/latestVersion-13.4.49.301.2-yellow)
+![Latest Version](https://img.shields.io/badge/latestVersion-13.4.49.301.3-yellow)
 <br>
-![Supported Platforms](https://img.shields.io/badge/Supported_Platforms:-Native_Android_-orange)
+![Supported Platforms](https://img.shields.io/badge/Supported_Platforms:-Native_Android_,_Unity_-orange)
 
 # Introduction
 
@@ -13,6 +13,7 @@ In this documentation we explained how to use Huawei-Applovin mediation.
 |   | Banner Ad | Interstitial Ad | Rewarded Ad | Native Ad | MREC |
 | --- | --- | --- | --- | --- | --- |
 | Native (Java/Kotlin) | ✅ | ✅ | ✅ | ✅ |  ✅ |
+| Unity |✅|✅| ✅ | ❌ | ✅ |
 
 
 # How to start?
@@ -65,7 +66,7 @@ In the app-level build.gradle, include Huawei Ads dependency (required by the ad
 
 ```groovy
 dependencies {
-    implementation 'com.applovin.mediation:huawei-adapter:13.4.49.301.2'
+    implementation 'com.applovin.mediation:huawei-adapter:13.4.49.301.3'
 }
 ```
 
@@ -165,7 +166,63 @@ To use _MREC_ ads in Native android apps, please check the Applovin-MAX SDK. Cli
 
    **Note:** Enter Huawei 300x250 Banner slot ID for Applovin MREC ad type.
  
- <br />
+ 
+ ## Unity
+ 
+ This section demonstrates how to use Applovin mediation feature with Huawei Ads Kit on Unity.
+
+Make sure to check the article on [How to use Huawei Ads with Supported Ad Platforms in Unity ?](https://medium.com/huawei-developers/how-to-use-huawei-ads-with-supported-ad-platforms-in-unity-2be08c943a7f) to learn how to implement Huawei Ads in Unity platform. 
+
+**Supported Ad Formats are:** Banner Ads, Interstitial Ads, Rewarded Ads and MREC Ads.
+
+Firstly, integrate the Applovin Unity SDK to Unity.
+
+For more details on Applovin Unity SDK visit [here](https://dash.applovin.com/documentation/mediation/unity/getting-started/integration)
+
+### **Banner Ads**
+To use Banner ads in Unity , please check the Applovin Unity SDK. Click [here](https://dash.applovin.com/documentation/mediation/unity/getting-started/banners) to get more information about Applovin Unity SDKs Banner Ad development. 
+
+### **Interstitial Ads**
+To use Interstitial ads in Unity, please check the Applovin Unity SDK. Click [here](https://dash.applovin.com/documentation/mediation/unity/getting-started/interstitials) to get more information about Applovin Unity SDKs Interstitial Ad development.
+
+### **Rewarded Ads**
+To use Rewarded ads in Unity, please check the Applovin Unity SDK. Click [here](https://dash.applovin.com/documentation/mediation/unity/getting-started/rewarded-ads) to get more information about Applovin Unity SDKs Rewarded Ad development.
+
+### **Medium Rectangle Ads**
+To use Medium Rectangle ads in Unity , please check the Applovin Unity SDK. Click [here](https://dash.applovin.com/documentation/mediation/unity/getting-started/mrecs) to get more information about Applovin Unity SDKs Medium Rectangle Ad development. 
+
+#### **Step 1:** 
+Make sure to switch to the Android Platform from **Build Settings -> Android -> Switch Platform**
+#### **Step 2:**
+**Edit -> Project Settings ->  Player -> Other Settings**<br>
+In Other Settings set minimum API level to at least **21**.
+#### **Step 3:**
+**Edit -> Project Settings ->  Player -> Publishing Settings**<br>
+In Publishing Settings select **“Custom Main Gradle Template”** , **“Custom Base Gradle Template”** and **“Custom Greadle Properties Template”** <br>
+This will let you override **mainTemplate.gradle** , **baseProjectTemplate.gradle** and **gradleTemplate.properties** files in the project.
+#### **Step 4:**
+**baseProjectTemplate.gradle** is equal to **project-level gradle** so you have to include **Huawei's Maven repositories** from the Integrate the Huawei Mediation SDK section from [**here**](#integrate-huawei-sdk) <br>
+**mainTemplate.gradle** is equal to **app-level build.gradle** so you have to include **dependencies** from the Integrate the Huawei Mediation SDK section from [**here**](#app-level).
+#### **Step 5:**
+Open **gradleTemplate.properties** and add the following lines
+```groovy
+android.useAndroidX=true
+android.enableJetifier=true
+```
+
+**After these configurations is completed you can display Huawei Ads.**
+
+**Note:** 
+In case of any error on aaptOptions you can add the following line to aaptOptions in **launcherTemplate.gradle** which you override it by enabiling it from **Edit -> Project Settings ->  Player -> Publishing Settings**
+
+```groovy
+aaptOptions {
+        noCompress = ['.ress', '.resource', '.obb'] + unityStreamingAssets.tokenize(', ')
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }
+```
+ 
+ This section demonstrates how to use Applovin mediation feature with Huawei Ads Kit on Unity android app.
  
  # Screenshots
  <table>
@@ -191,6 +248,13 @@ Rewarded Ad
 
 Native Ad
 </td>
+ 
+<td>
+<img src="https://user-images.githubusercontent.com/20942609/160766124-26d8c0ad-4057-49df-a9a0-db3b833e6a52.jpg" width="200">
+
+Medium Rectangle Ad
+</td>
+ 
 </tr>
 </tr>
 </table>
