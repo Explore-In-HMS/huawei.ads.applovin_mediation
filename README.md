@@ -1,8 +1,10 @@
  <h1 align="center">Huawei-Applovin Mediation Github Documentation</h3>
 
+
 ![Latest Version](https://img.shields.io/badge/latestVersion-13.4.49.301.3-yellow)
 <br>
 ![Supported Platforms](https://img.shields.io/badge/Supported_Platforms:-Native_Android_,_Unity_-orange)
+
 
 # Introduction
 
@@ -14,6 +16,7 @@ In this documentation we explained how to use Huawei-Applovin mediation.
 | --- | --- | --- | --- | --- | --- |
 | Native (Java/Kotlin) | ✅ | ✅ | ✅ | ✅ |  ✅ |
 | Unity |✅|✅| ✅ | ❌ | ✅ |
+
 
 
 # How to start?
@@ -223,6 +226,7 @@ aaptOptions {
 ```
  
  This section demonstrates how to use Applovin mediation feature with Huawei Ads Kit on Unity android app.
+
  
  # Screenshots
  <table>
