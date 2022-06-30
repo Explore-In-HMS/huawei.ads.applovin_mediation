@@ -145,7 +145,9 @@ Firstly, integrate the Applovin-MAX SDK for Android
 
 [Applovin-MAX Android SDK](https://dash.applovin.com/documentation/mediation/android/getting-started/integration) can be used for all ad types.
 
-**Note** : Developers can find app level build.gradle in their project from __**"app-folder/app/build.gradle"**__
+**Note** : 
+1) Developers can find app level build.gradle in their project from __**"app-folder/app/build.gradle"**__
+2) If you use the native ad format in your application, please submit a ticket [here](https://developer.huawei.com/consumer/en/support/feedback) to get support from Huawei. 
 
 ### **Banner Ad**
 
