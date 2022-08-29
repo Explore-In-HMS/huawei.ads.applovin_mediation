@@ -8,7 +8,9 @@
 
 # Introduction
 
-In this documentation we explained how to use Huawei-Applovin mediation.
+In this documentation we explained how to use Huawei-Applovin mediation plugin developed by Applovin. 
+Plugin repository link is [here](https://github.com/AppLovin/AppLovin-MAX-SDK-Android/tree/master/Custom%20Adapters/Huawei)
+
 
 # Compatibility
 
