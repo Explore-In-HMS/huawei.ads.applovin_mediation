@@ -1,7 +1,7 @@
  <h1 align="center">Huawei-Applovin Mediation Github Documentation</h3>
 
 
-![Latest Version](https://img.shields.io/badge/latestVersion-13.4.49.301.3-yellow)
+![Latest Version](https://img.shields.io/badge/latestVersion-13.4.54.300.3-yellow)
 <br>
 ![Supported Platforms](https://img.shields.io/badge/Supported_Platforms:-Native_Android_,_Unity_-orange)
 
@@ -71,7 +71,7 @@ In the app-level build.gradle, include Huawei Ads dependency (required by the ad
 
 ```groovy
 dependencies {
-    implementation 'com.applovin.mediation:huawei-adapter:13.4.49.301.3'
+    implementation 'com.applovin.mediation:huawei-adapter:<latest-version>'
 }
 ```
 
